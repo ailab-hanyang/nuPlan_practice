@@ -181,10 +181,20 @@ class CustomDataModule(pl.LightningDataModule):
             return
 
         if stage == "fit":
+            # Debug: Print actual log names from scenarios
+            actual_log_names = list(set([scenario.log_name for scenario in self._all_samples]))
+            print(f"DEBUG: Actual log names in scenarios ({len(actual_log_names)}): {actual_log_names[:10]}...")
+            
+            # Debug: Print splitter's expected log names
+            print(f"DEBUG: Splitter train logs: {list(self._splitter.train_logs)}")
+            print(f"DEBUG: Splitter val logs: {list(self._splitter.val_logs)}")
+            print(f"DEBUG: Splitter test logs: {list(self._splitter.test_logs)}")
+            
             # Training Dataset
             train_samples = self._splitter.get_train_samples(
                 self._all_samples, self._worker
             )
+            print(f"DEBUG: Found {len(train_samples)} training samples")
             assert len(train_samples) > 0, "Splitter returned no training samples"
 
             self._train_set = create_dataset(
