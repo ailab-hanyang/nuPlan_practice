@@ -105,5 +105,4 @@ def main(cfg: DictConfig) -> Optional[TrainingEngine]:
         raise NameError(f"Function {cfg.py_func} does not exist")
 
 
-if __name__ == "__main__":
-    main()
+if __name__ == "__main__":    main()

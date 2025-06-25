@@ -1,0 +1,28 @@
+_target_: nuplan.planning.scenario_builder.nuplan_db.nuplan_scenario_builder.NuPlanScenarioBuilder
+_convert_: 'all'
+# data_root: ${oc.env:NUPLAN_DATA_ROOT}/nuplan-v1.1/trainval
+# data_root: ${oc.env:NUPLAN_DATA_ROOT}/nuplan-v1.1/splits/data
+# data_root: ${oc.env:NUPLAN_DATA_ROOT}/nuplan-v1.1/splits/data/cache/test
+# data_root: ${oc.env:NUPLAN_DATA_ROOT}/nuplan-v1.1/splits/data/cache/val
+data_root:
+  - ${oc.env:NUPLAN_DATA_ROOT}/nuplan-v1.1/splits/data/cache/train_boston
+  - ${oc.env:NUPLAN_DATA_ROOT}/nuplan-v1.1/splits/data/cache/train_pittsburgh
+  - ${oc.env:NUPLAN_DATA_ROOT}/nuplan-v1.1/splits/data/cache/train_singapore
+  - ${oc.env:NUPLAN_DATA_ROOT}/nuplan-v1.1/splits/data/cache/train_vegas_1
+  - ${oc.env:NUPLAN_DATA_ROOT}/nuplan-v1.1/splits/data/cache/train_vegas_2
+  - ${oc.env:NUPLAN_DATA_ROOT}/nuplan-v1.1/splits/data/cache/train_vegas_3
+  - ${oc.env:NUPLAN_DATA_ROOT}/nuplan-v1.1/splits/data/cache/train_vegas_4
+  - ${oc.env:NUPLAN_DATA_ROOT}/nuplan-v1.1/splits/data/cache/train_vegas_5
+  - ${oc.env:NUPLAN_DATA_ROOT}/nuplan-v1.1/splits/data/cache/train_vegas_6
+  - ${oc.env:NUPLAN_DATA_ROOT}/nuplan-v1.1/splits/data/cache/val
+  - ${oc.env:NUPLAN_DATA_ROOT}/nuplan-v1.1/splits/data/cache/test
+map_root: ${oc.env:NUPLAN_MAPS_ROOT}
+sensor_root: ${oc.env:NUPLAN_DATA_ROOT}/nuplan-v1.1/sensor_blobs
+db_files: null  # if db file(s) exist locally, the data_root is ignored
+map_version: nuplan-maps-v1.0
+include_cameras: false # Include camera data in the scenarios.
+max_workers: null
+verbose: ${verbose}
+defaults:
+  - vehicle_parameters: nuplan_vehicle_parameters
+  - scenario_mapping: nuplan_scenario_mapping
