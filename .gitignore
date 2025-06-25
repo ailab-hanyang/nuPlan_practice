@@ -162,3 +162,16 @@ wandb/
 outputs/
 *.ckpt
 checkpoints/
+**/*.pt
+**/*.png
+**/*.jpg
+**/*.jpeg
+**/*.gif
+**/*.bmp
+**/*.tiff
+**/*.webp
+**/*.ico
+**/*.svg
+**/*.pdf
+**/*.docx
+**/*.doc
