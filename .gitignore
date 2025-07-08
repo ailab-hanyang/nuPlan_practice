@@ -160,6 +160,7 @@ cython_debug/
 .vscode
 wandb/
 outputs/
+output/
 *.ckpt
 checkpoints/
 **/*.pt
@@ -175,3 +176,4 @@ checkpoints/
 **/*.pdf
 **/*.docx
 **/*.doc
+v2_scenarios.txt
