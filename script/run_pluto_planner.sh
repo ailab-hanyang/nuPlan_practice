@@ -20,6 +20,6 @@ python run_simulation.py \
     verbose=true \
     experiment_uid="pluto_planner/$FILTER" \
     planner.pluto_planner.render=true \
-    planner.pluto_planner.planner_ckpt="$CKPT_ROOT/$CKPT" \
+    planner.pluto_planner.planner_ckpt="$CKPT" \
     +planner.pluto_planner.save_dir=$VIDEO_SAVE_DIR
 

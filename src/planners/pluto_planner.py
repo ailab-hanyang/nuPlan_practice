@@ -261,6 +261,16 @@ class PlutoPlanner(AbstractPlanner):
                     return_img=True,
                 )
             )
+            
+        import imageio
+
+            imageio.mimsave(
+                self.video_dir
+                / f"{self._scenario.log_name}_{self._scenario.token}.mp4",
+                self._imgs,
+                fps=10,
+            )
+            print("\n video saved to ", self.video_dir / "video.mp4\n")
 
         return trajectory
 

@@ -102,7 +102,7 @@ sh ./script/run_pluto_planner.sh pluto_planner nuplan training_scenarios_sample 
 The rendered simulation video will be saved to the specified directory (need to create floder `./video_closed_loop_result`).
 
 ### Closed-Loop Inference 영상
-![alt text](output.gif)
+![alt text](./output.gif)
 
 
 ## Original PLUTO Repository
