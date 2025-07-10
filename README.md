@@ -7,6 +7,8 @@
 conda create -n nuplan_py39 python=3.9 pip=24.0 -y
 conda activate nuplan_py39
 
+pip install pip==23.1 (해당 모델은 24.1 이하의 pip 버전 요구)
+
 git clone https://github.com/motional/nuplan-devkit.git && cd nuplan-devkit
 pip install -e .
 pip install -r ./requirements.txt
