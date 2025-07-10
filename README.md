@@ -7,8 +7,6 @@
 conda create -n nuplan_py39 python=3.9 pip=24.0 -y
 conda activate nuplan_py39
 
-pip install pip==23.1 (해당 모델은 24.1 이하의 pip 버전 요구)
-
 git clone https://github.com/motional/nuplan-devkit.git && cd nuplan-devkit
 pip install -e .
 pip install -r ./requirements.txt
@@ -21,6 +19,7 @@ pip install -r ./requirements.txt
 ### 환경 구성 시 유의해야 할 점
 #### requirements.txt 설치 시 버전 에러 발생하면 해당 패키지 주석 후 재실행
 - 에러 발생 패키지는 본인 cuda 환경에 맞는 버전으로 설치 진행
+
 #### cuda 버전 확인 명령어
 ```
 nvcc -V
