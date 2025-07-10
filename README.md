@@ -4,7 +4,7 @@
 
 ### Setup conda environment
 ```
-conda create -n nuplan_py39 python=3.9
+conda create -n nuplan_py39 python=3.9 pip=24.0 -y
 conda activate nuplan_py39
 
 git clone https://github.com/motional/nuplan-devkit.git && cd nuplan-devkit
@@ -19,6 +19,11 @@ pip install -r ./requirements.txt
 ### 환경 구성 시 유의해야 할 점
 #### requirements.txt 설치 시 버전 에러 발생하면 해당 패키지 주석 후 재실행
 - 에러 발생 패키지는 본인 cuda 환경에 맞는 버전으로 설치 진행
+#### cuda 버전 확인 명령어
+```
+nvcc -V
+```
+
 
 #### 추가 설치 필요 패키지 1: torch 
 - 본인 cuda version에 맞는 torch 설치 (추천 버전[검증된 환경]: 1.12.0 ~ 2.2.0 사이)
@@ -96,7 +101,7 @@ CUDA_VISIBLE_DEVICES=0 python run_training.py \
 ## Inference
 ### Inference(simulation) Command 
 ```bash
-sh ./script/run_pluto_planner.sh pluto_planner nuplan training_scenarios_sample pluto_1M_aux_cil.ckpt /video_closed_loop_result
+sh ./script/run_pluto_planner.sh pluto_planner nuplan training_scenarios_sample $(pwd)/checkpoints/pluto_1M_aux_cil.ckpt $(pwd)/video_closed_loop_result
 ```
 
 The rendered simulation video will be saved to the specified directory (need to create floder `./video_closed_loop_result`).
