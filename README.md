@@ -80,10 +80,10 @@ PYTHONPATH=$PYTHONPATH:$PWD/
 ```bash
 CUDA_VISIBLE_DEVICES=0 python run_training.py \
      py_func=train +training=train_pluto \
-     worker=single_machine_thread_pool worker.max_workers=1 \
+     worker=single_machine_thread_pool worker.max_workers=2 \
      scenario_builder=nuplan \
      cache.cache_path=$PATH_TO_nuPlan_practice/nuplan_dataset/exp/cache_pluto_sanity_check cache.use_cache_without_dataset=true \
-     data_loader.params.batch_size=1 data_loader.params.num_workers=1 \
+     data_loader.params.batch_size=2 data_loader.params.num_workers=2 \
      lr=1e-3 epochs=150 warmup_epochs=3 weight_decay=0.0001
 ```
 
