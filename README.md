@@ -106,8 +106,14 @@ CUDA_VISIBLE_DEVICES=0 python run_training.py \
 
 ## Inference
 ### Inference(simulation) Command 
+#### 순차차 Inference(simulation) Command
 ```bash
 sh ./script/run_pluto_planner.sh pluto_planner nuplan training_scenarios_sample $(pwd)/checkpoints/pluto_1M_aux_cil.ckpt $(pwd)/video_closed_loop_result
+```
+
+#### 병렬 Inference(simulation) Command
+```bash
+sh ./script/run_pluto_planner_mp.sh pluto_planner nuplan training_scenarios_sample $(pwd)/checkpoints/pluto_1M_aux_cil.ckpt $(pwd)/video_closed_loop_result
 ```
 
 The rendered simulation video will be saved to the specified directory (need to create floder `./video_closed_loop_result`).
