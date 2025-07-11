@@ -38,7 +38,7 @@ nvcc -V
 #### Pytorch & Natten 설치 명령어 
 #### [Recommend]torch version 2.0.x, cuda version 11.8일 시
 ```sh
-chmod +x scipt/setup_env.sh && ./script/setup_env.sh
+chmod +x script/setup_env.sh && ./script/setup_env.sh
 ```
 #### torch version 2.2.x, cuda version 12.1일 시
 ```sh
