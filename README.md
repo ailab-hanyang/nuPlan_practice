@@ -26,30 +26,30 @@ nvcc -V
 ```
 
 
-#### 추가 설치 필요 패키지 1: torch 
+### 추가 설치 필요 패키지 1: torch 
 - 본인 cuda version에 맞는 torch 설치 (추천 버전[검증된 환경]: 1.12.0 ~ 2.2.0 사이)
 
-##### 설치 명령어 참고 경로: https://pytorch.org/get-started/previous-versions/ 
+#### 설치 명령어 참고 경로: https://pytorch.org/get-started/previous-versions/ 
 
-#### 추가 설치 필요 패키지 2: natten (neighborhood attention)
+### 추가 설치 필요 패키지 2: natten (neighborhood attention)
 - 만약 본인의 설치 torch version이 2점대 이면 natten version 0.17.0 추천
 - 만약 본인의 설치 torch version이 1점대 이면 natten version 0.14.6 추천
 
-##### Pytorch & Natten 설치 명령어 
-##### [Recommended]torch version 2.0.x, cuda version 11.8일 시
+#### Pytorch & Natten 설치 명령어 
+#### [Recommend]torch version 2.0.x, cuda version 11.8일 시
 ```sh
 chmod +x scipt/setup_env.sh && ./script/setup_env.sh
 ```
-##### torch version 2.2.x, cuda version 12.1일 시
+#### torch version 2.2.x, cuda version 12.1일 시
 ```sh
 pip3 install natten==0.17.0+torch220cu121 -f https://shi-labs.com/natten/wheels 
 ```
-##### torch version 1.13.x, cuda version 11.6일 시
+#### torch version 1.13.x, cuda version 11.6일 시
 ```sh
 pip3 install natten==0.14.6+torch1130cu116  -f https://shi-labs.com/natten/wheels
 ```
 
-#### 추가 설치 필요 패키지 3: imageio 
+### 추가 설치 필요 패키지 3: imageio 
 - closed-loop 추론 시각화 목적
 
 설치 명령어
