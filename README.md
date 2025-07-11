@@ -35,7 +35,7 @@ nvcc -V
 - 만약 본인의 설치 torch version이 2점대 이면 natten version 0.17.0 추천
 - 만약 본인의 설치 torch version이 1점대 이면 natten version 0.14.6 추천
 
-##### 설치 명령어 
+##### Pytorch 설치 명령어 
 ```sh
 # [Recommended]torch version 2.0.x, cuda version 11.8일 시
 chmod +x scipt/setup_env.sh && ./script/setup_env.sh
